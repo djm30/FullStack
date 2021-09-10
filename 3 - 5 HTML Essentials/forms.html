@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>Forms Demo</h1>
+
+    <form action="/search">
+      <button type="button">Stock button</button>
+      <br />
+      <hr />
+
+      <label for="username">Enter a username</label>
+      <input id="username" name="username" type="text" placeholder="username" />
+      <br />
+
+      <label for="password">Enter a password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        placeholder="password"
+      />
+      <br />
+      <br />
+
+      <label for="color">Choose a color</label>
+      <input id="color" name="color" type="color" />
+      <br />
+      <br />
+
+      <label for="number">Enter a number</label>
+      <input
+        id="number"
+        name="number"
+        type="number"
+        placeholder="number"
+        min="0"
+        max="1000"
+        step="2"
+      />
+      <br />
+
+      <button>Submit</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <form action="https://www.reddit.com/search">
+      <label for="search">Search Reddit:</label>
+      <input id="search" name="q" type="text" />
+      <br />
+      <button>Search</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <form action="https://www.google.com/search">
+      <label for="search">Search Google:</label>
+      <input id="gsearch" name="q" type="text" />
+      <br />
+      <button>Search</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <h1>Checkboxes</h1>
+
+    <form action="/birds">
+      <input type="checkbox" name="tos" id="agree" />
+      <label for="agree">I agree to everything</label>
+      <br />
+      <button>Submit</button>
+    </form>
+
+    <br />
+
+    <h1>Radial buttons</h1>
+
+    <form action="/name">
+      <label for="xs">XS:</label>
+      <input type="radio" name="size" id="xs" value="xs" />
+      <label for="s">S:</label>
+      <input type="radio" name="size" id="s" value="s" />
+      <label for="m">m:</label>
+      <input type="radio" name="size" id="m" value="m" />
+      <br />
+
+      <label for="meal">Please select a meal</label>
+      <select name="meal" id="meal">
+        <option value="def">--Please Select An Option</option>
+        <option value="fish">Fish</option>
+        <option value="veg">Vegetarian</option>
+        <option value="meat">Meat Feast</option>
+      </select>
+      <br />
+
+      <p>Audio Settings</p>
+      <input type="range" id="volume" name="volume" min="0" max="10" />
+      <label for="volume">Volume</label>
+      <br />
+
+      <label for="req">Any special requests?</label>
+
+      <textarea name="req" id="req" cols="30" rows="10"></textarea>
+
+      <br />
+      <button>Submit</button>
+    </form>
+
+    <br />
+    <hr />
+
+    <h2>Validations Demo</h2>
+    <form action="/valid">
+      <label for="first">Enter First Name</label>
+      <input type="text" name="first" id="first" required />
+
+      <label for="user">Enter Username</label>
+      <input
+        type="text"
+        name="uname"
+        id="uname"
+        minlength="5"
+        maxlength="14"
+        required
+      />
+      <!-- pattern attribute can be used for regex expresisions-->
+
+      <label for="email">Enter Email</label>
+      <input type="email" name="email" id="email" required />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
