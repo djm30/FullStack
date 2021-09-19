@@ -1,0 +1,120 @@
+/* * {
+    background-color: cyan;
+} */
+
+body {
+  background-color: #f1faee;
+}
+
+button {
+  font-size: 30px;
+  background-color: #a8dadc;
+}
+
+h1,
+h2 {
+  color: #1d3557;
+}
+
+#signup {
+  background-color: #1d3557;
+  color: #f1faee;
+}
+
+/* all span elements */
+span {
+  color: #457b9d;
+}
+
+/* Elements with a class tag */
+.tag {
+  background-color: #e63946;
+  color: #f1faee;
+  font-size: 16px;
+}
+
+/* All anchor tags that are a descendant of the post*/
+.post a {
+  color: #457b9d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer a {
+  color: #e63946;
+}
+
+/* Adjacent selection, select buttons that come right after an h2, can't be nested */
+h2 + button {
+  font-size: 20px;
+}
+
+/* Direct child, anchor tags that are the direct child of the footer element, e.g nested directly within footer and not nested within further elements */
+footer > a {
+  color: #457b9d;
+}
+
+/* Attribute selector get elemetns that have an attribute of a certain value, e.g type or href equal to certain values */
+input[type="password"] {
+  color: greenyellow;
+}
+/* * signifies any href that contains google,  $= specifies end with */
+a[href*="google"] {
+  color: #1d3557;
+}
+
+/* pseudo class :hover, pseudo classes based on differnt states of elements */
+.post a:hover {
+  text-decoration: underline;
+}
+
+/* When a button is being pressed */
+.post button:active {
+  background-color: #02c399;
+}
+
+/* Selects every 2nd post, can change number to change,
+must have n or it just selects the 2nd element 
+can even do 2n-1 eg*/
+.post:nth-of-type(2n) {
+  background-color: #dfe8dc;
+}
+
+/*Pseudo elements selects certain parts of elements
+
+Selects first letter */
+h2::first-letter {
+  font-size: 50px;
+}
+
+/* First line of a paragraph */
+p::first-line {
+  color: purple;
+}
+
+/* When you select paragraph background color changes */
+p::selection {
+  background-color: #fcbf49;
+}
+
+/* Cascading styles sheets, when conflicting styles are present, style 
+further down the doc will be used */
+.post button:hover {
+  background-color: #e63946;
+  color: #f1faee;
+}
+
+button:hover {
+  background-color: olive;
+}
+
+/* Specificity
+ID  CLASS ELEMENT
+
+*/
+/* Inline styles are the msot specific but bad convention to use them */
+
+/* important, specifies style is the most specific and it overrules every other style */
+button {
+  background-color: magenta !important;
+}
